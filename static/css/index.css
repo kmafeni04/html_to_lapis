@@ -1,0 +1,20 @@
+.code-input {
+  font-family: monospace;
+  resize: none;
+  font-size: 1.1rem;
+  max-height: 65vh;
+}
+.code-output {
+  overflow: scroll;
+  position: relative;
+  top: 0;
+  max-height: 65vh;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  height: 0.2rem;
+  width: 100vw;
+  background: var(--font-color);
+}

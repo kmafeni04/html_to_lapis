@@ -1,0 +1,22 @@
+---@type Widget
+local Widget = require("lapis.html").Widget
+
+return Widget:extend(function(self)
+  html(function()
+    head(function()
+      meta({ charset = "UTF-8" })
+      meta({ name = "viewport", content = "width=device-width, initial-scale=1" })
+      title(self.page_title or "Lapis Page")
+      link({ rel = "stylesheet", href = "/static/css/reset.css" })
+      link({ rel = "stylesheet", href = "/static/css/utility.css" })
+      link({ rel = "stylesheet", href = "/static/css/index.css" })
+      script({ src = "/static/js/htmx(1.9.12).js" })
+      script({ src = "/static/js/copy_to_clipboard.js" })
+    end)
+    body({ ["hx-boost"] = "true", class = "height-max" }, function()
+      main({ class = "width-100 height-100" }, function()
+        self:content_for("inner")
+      end)
+    end)
+  end)
+end)
