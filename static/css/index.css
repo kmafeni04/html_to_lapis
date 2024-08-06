@@ -1,18 +1,8 @@
-.code-input {
+.code {
   font-family: monospace;
   font-size: 1rem;
   resize: none;
-  max-height: 65vh;
-}
-.code-output {
-  overflow: scroll;
-  position: relative;
-  top: 0;
-  max-height: 65vh;
-}
-
-.code {
-  font-size: 1rem;
+  max-height: 70vh;
 }
 
 .loading {

@@ -3,6 +3,10 @@
   --border-radius-small: 1rem;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .visible {
   display: block;
 }

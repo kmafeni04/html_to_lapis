@@ -42,13 +42,11 @@ return Widget:extend(function(self)
             name = "content",
             ["hx-post"] = self:url_for("convert"),
             ["hx-trigger"] = "input",
-            class = "code-input input width-100 height-100"
+            class = "code input width-100 height-100"
           })
         end)
       div({ class = "flex-col gap-s width-50 height-100" }, function()
-        pre({ id = "code-output", class = "code-output height-100" }, function()
-          code({ id = "result", class = "code" })
-        end)
+        textarea({ id = "result", class = "code input bold height-100", disabled = true })
         button({
           id = "copy-btn",
           class = "input btn",
