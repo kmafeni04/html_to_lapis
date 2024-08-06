@@ -56,7 +56,6 @@ html {
 body {
   color: var(--font-color);
   min-height: 100svh;
-  font-size: 1.1rem;
 }
 
 img,
@@ -82,4 +81,5 @@ button {
 
 code {
   font-family: monospace;
+  font-weight: bold;
 }

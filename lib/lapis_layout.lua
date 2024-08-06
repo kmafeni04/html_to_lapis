@@ -52,8 +52,8 @@ local function lapis_layout(options)
 
   local function raw(val)
     if string.match(val, "[\"\n']") or #val > 200 then
-      local equals = 0
-      string.gsub(val, "%](=*)%]", function(len)
+      local equals
+      val = string.gsub(val, "%](=*)%]", function(len)
         if #len >= equals then
           equals = #len + 1
         end

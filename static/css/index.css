@@ -1,7 +1,7 @@
 .code-input {
   font-family: monospace;
+  font-size: 1rem;
   resize: none;
-  font-size: 1.1rem;
   max-height: 65vh;
 }
 .code-output {
@@ -9,6 +9,10 @@
   position: relative;
   top: 0;
   max-height: 65vh;
+}
+
+.code {
+  font-size: 1rem;
 }
 
 .loading {
