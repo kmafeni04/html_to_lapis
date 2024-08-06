@@ -8,11 +8,17 @@
     --font-color: var(--font-color-light);
     --font-color-inverse: var(--font-color-dark);
   }
+  body {
+    background-color: white;
+  }
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --font-color: var(--font-color-dark);
     --font-color-inverse: var(--font-color-light);
+  }
+  body {
+    background-color: #1c1b22;
   }
 }
 
