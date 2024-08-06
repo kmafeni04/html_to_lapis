@@ -10,6 +10,7 @@ app:get("/", function(self)
 end)
 
 app:post("convert", "/convert", function(self)
+  self.page_title = "HTML to Lapis"
   local content = self.params.content
   local lapis_layout = require("lib.lapis_layout")
   local moon_output, lua_output = lapis_layout({
@@ -21,7 +22,7 @@ app:post("convert", "/convert", function(self)
   elseif self.params.type == "lua" then
     return lua_output
   else
-    return "error, invalid type"
+    return "An error has occured"
   end
 end)
 
