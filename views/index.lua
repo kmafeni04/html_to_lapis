@@ -1,6 +1,7 @@
 ---@type Widget
 local Widget = require("lapis.html").Widget
 
+
 return Widget:extend(function(self)
   div({ id = "loading", class = "htmx-indicator loading" })
   div({ class = "flex-col-center gap-s width-max height-100" }, function()
@@ -51,7 +52,7 @@ return Widget:extend(function(self)
           id = "copy-btn",
           class = "input btn",
           ["_"] = [[
-            on click writeText(#result.innerText) into navigator.clipboard
+            on click writeText(#result.value) into navigator.clipboard
             set my innerHTML to 'Copied'
             wait 1s
             set my innerHTML to 'Copy'
