@@ -42,7 +42,7 @@ return Widget:extend(function(self)
             placeholder = "Paste your HTML here and I'll convert it",
             name = "content",
             ["hx-post"] = self:url_for("convert"),
-            ["hx-trigger"] = "input",
+            ["hx-trigger"] = "input delay:0.5s",
             class = "code input width-100 height-100"
           })
         end)
