@@ -182,7 +182,7 @@ local function lapis_layout(options)
             else
               table.insert(moon_attr, "\"" .. key[1] .. "\": " .. raw_attr)
             end
-            if not lua_keywords[key] and string.match(key[1], "^[%w%d][%w%d_]*$") then
+            if not lua_keywords[key[1]] and string.match(key[1], "^[%w%d][%w%d_]*$") then
               table.insert(lua_attr, key[1] .. " = " .. raw_attr)
             else
               table.insert(lua_attr, "[\"" .. key[1] .. "\"] = " .. raw_attr)
