@@ -47,7 +47,7 @@ return Widget:extend(function(self)
           })
         end)
       div({ class = "flex-col gap-s width-50 height-100" }, function()
-        textarea({ id = "result", class = "code input bold height-100", disabled = true })
+        textarea({ id = "result", class = "code input bold width-100 height-100", disabled = true })
         button({
           id = "copy-btn",
           class = "input btn",

@@ -52,14 +52,14 @@ local function lapis_layout(options)
 
   local function raw(val)
     if string.match(val, "[\"\n']") or #val > 200 then
-      local equals
+      local equals = 0
       val = string.gsub(val, "%](=*)%]", function(len)
         if #len >= equals then
           equals = #len + 1
         end
       end)
-      equals = string.rep("=", equals)
-      return "[" .. equals .. "[" .. val .. "]" .. equals .. "]"
+      local equals_signs = string.rep("=", equals)
+      return "[" .. equals_signs .. "[" .. val .. "]" .. equals_signs .. "]"
     end
     val = string.gsub(val, "\\", "\\\\")
     return "\"" .. val .. "\""
