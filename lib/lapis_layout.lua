@@ -149,8 +149,8 @@ local function lapis_layout(options)
           if literal == nil then
             literal = raw_value
           end
-          table.insert(moon_result, tabs .. "raw " .. raw_value)
-          table.insert(lua_result, tabs .. "raw(" .. raw_value .. ")")
+          table.insert(moon_result, tabs .. "text " .. raw_value)
+          table.insert(lua_result, tabs .. "text(" .. raw_value .. ")")
         end
       elseif type(value) == "table" then
         literal = false
